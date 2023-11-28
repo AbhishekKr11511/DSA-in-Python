@@ -4,7 +4,7 @@ class Node:
         self.left = None
         self.right = None
 
-
+# This is through recursion
 def insertInBST(node, val):
     if node == None:
         return Node(val)
@@ -14,6 +14,15 @@ def insertInBST(node, val):
         return insertInBST(node.left, val)
     return node
 
+# This is by interation
+def insertion(node, val):
+    while node!=None:
+        if node.val<val:
+            node = node.right
+        elif node.val>val:
+            node = node.left
+    return Node(val)
+
 
 
 myRoot = Node(70)
@@ -21,4 +30,4 @@ myRoot.left = Node(50)
 myRoot.right = Node(90)
 
 
-print((insertInBST(myRoot, 20)).val)
+print((insertion(myRoot, 20)).val)
