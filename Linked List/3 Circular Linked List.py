@@ -31,6 +31,7 @@ class CircularList():
         return size
     
     def display(self):
+        if 
         temp = self.head
         print("Circular list :", end=" ")
         for i in range(self.sizeOfList()):
